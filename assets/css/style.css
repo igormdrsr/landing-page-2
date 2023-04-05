@@ -3,6 +3,7 @@
 :root {
     font-size: 62.5%;
     --primary-color: #FF523F;
+    --dark-primary-color: #a52213;
     --bg-color: #222222;
     --font-color: #FFF;
 }
@@ -95,6 +96,11 @@ input {
     font-size: 1.6rem;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: .2rem solid var(--primary-color);
+}
+
 input[type="submit"] {
     cursor: pointer;
     color: var(--font-color);
@@ -107,11 +113,18 @@ input[type="submit"]:active {
     transform: scale(.95);
 }
 
+input[type="submit"]:hover {
+    background-color: var(--font-color);
+    color: var(--primary-color);
+    outline: .1rem solid var(--primary-color);
+}
+
 .block {
     display: block;
 }
 
-.font {
+.modifier {
+    display: block;
     color: var(--primary-color);
     font-weight: 700;
 }
